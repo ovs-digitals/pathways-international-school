@@ -7,7 +7,7 @@ const values = [
     icon: Handshake,
     title: "Respect & Empathy",
     text: "We practise kindness, respect and compassion in every interaction — building a caring school community.",
-    image: "community.webp",
+    image: "hero-bg2.webp",
   },
   {
     icon: ShieldCheck,
@@ -19,7 +19,7 @@ const values = [
     icon: Award,
     title: "Excellence",
     text: "We set high standards in learning and personal growth, supporting every student to achieve their best.",
-    image: "o_level.webp",
+    image: "hero-bg1.webp",
   },
   {
     icon: Users,
@@ -51,7 +51,7 @@ export default function PathwaysWelcomePage() {
         eyebrow="About Pathways"
         title="Welcome to"
         accent="Pathways International School."
-        image="community.webp"
+        image="hero-students.webp"
         text="A friendly, supportive learning community where students grow into confident, responsible and globally minded individuals."
       >
         <p className="font-serif text-2xl text-white/90 md:text-3xl">
@@ -146,7 +146,7 @@ export default function PathwaysWelcomePage() {
               <Reveal key={title} variant="up" delay={i * 0.12}>
                 <TiltCard className="group h-full overflow-hidden rounded-3xl bg-white shadow-xl shadow-navy-950/10 ring-1 ring-slate-100">
                   <div className="relative h-40 overflow-hidden">
-                    <img src={image} alt="" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" loading="lazy" />
+                    <img src={image} alt="" className="h-full w-full object-cover object-[50%_25%] transition duration-700 group-hover:scale-110" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 to-transparent" />
                     <span className="absolute -bottom-6 left-6 grid h-12 w-12 place-items-center rounded-xl bg-gold-500 text-navy-900 shadow-lg ring-4 ring-white transition group-hover:-translate-y-1">
                       <Icon className="h-6 w-6" />
@@ -186,7 +186,7 @@ export default function PathwaysWelcomePage() {
           </Reveal>
           <Reveal variant="zoom" className="relative">
             <div className="grid grid-cols-2 gap-4">
-              <img src="stageperformance.webp" alt="" className="h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+              <img src="st-stream-it.webp" alt="" className="h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
               <img src="sports.webp" alt="" className="mt-10 h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
             </div>
             <div className="soft-float absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-gold-500 px-5 py-2 text-xs font-bold uppercase tracking-widest text-navy-900 shadow-xl">

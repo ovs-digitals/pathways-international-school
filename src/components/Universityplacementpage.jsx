@@ -6,11 +6,11 @@ import { WHATSAPP_LINK, WhatsAppIcon } from "./WhatsAppButton";
 /* International University Placement Programme — airy layout */
 const ASSOCIATIONS = [
   {
-    name: "UCAS", tag: "United Kingdom", logo: "partners/ucas-approved.webp",
+    name: "UCAS", tag: "United Kingdom", logo: "partners/ucas.webp",
     text: "As a UCAS Registered Centre, we support students with UK university applications, course selection, personal statements, academic references and admission requirements.",
   },
   {
-    name: "AusPak International", tag: "Study Abroad", logo: "partners/auspak-gujranwala.webp",
+    name: "AusPak International", tag: "Study Abroad", logo: "partners/auspak-intl.webp",
     text: "Through our partnership with AusPak International, students get professional admission counselling, application assistance and study visa guidance for Australia and other destinations.",
   },
 ];

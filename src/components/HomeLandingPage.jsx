@@ -59,7 +59,7 @@ const promises = [
   {
     icon: Globe2,
     title: "A Fully Online School",
-    image: "community.webp",
+    image: "hero-bg2.webp",
     text: "Live online classes, recorded lessons and teachers who know you by name — a complete school on your screen, with full regular-student status.",
   },
   {
@@ -71,7 +71,7 @@ const promises = [
   {
     icon: BookOpenCheck,
     title: "Your School Travels With You",
-    image: "curriculam.webp",
+    image: "st-stream-it.webp",
     text: "At home, in another city or on your travels — your classes, notes and teachers go wherever you go.",
   },
 ];
@@ -81,7 +81,7 @@ const programs = [
     no: "01",
     title: "Pre-IGCSE",
     subtitle: "Foundation Programme",
-    image: "teacherwithstudents.webp",
+    image: "st-young-learner.webp",
     text: "Build the subject foundations needed to move confidently into IGCSE / O Levels.",
     facts: ["1 Year", "2 Terms", "Foundation"],
     points: ["Mathematics, English & Sciences", "Computer Science & Islamic Studies", "Smooth progression into IGCSE"],
@@ -91,7 +91,7 @@ const programs = [
     no: "02",
     title: "IGCSE / O Levels",
     subtitle: "International GCSE",
-    image: "o_level.webp",
+    image: "hero-bg1.webp",
     text: "A globally recognised qualification that opens doors to leading colleges and universities.",
     facts: ["2 Years", "3 Terms", "Pearson Edexcel"],
     to: "/igcse",
@@ -101,7 +101,7 @@ const programs = [
     no: "03",
     title: "A Levels",
     subtitle: "International AS & A2",
-    image: "seniorstudent.webp",
+    image: "senior.webp",
     text: "Advanced subject depth with personal mentoring and university-ready preparation.",
     facts: ["AS + A2", "Regular", "Self-Paced"],
     to: "/international-as-levels",
@@ -230,7 +230,7 @@ export default function HomeLandingPage() {
                   <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-700 lg:mt-5">Step {i + 1} · {p.subtitle}</p>
                   <article className={`group mt-3 flex flex-col overflow-hidden rounded-3xl bg-white text-left shadow-xl shadow-navy-950/10 transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl ${p.featured ? "ring-2 ring-gold-400" : "ring-1 ring-slate-100 hover:ring-gold-300"}`}>
                     <div className="relative h-36 overflow-hidden">
-                      <img src={p.image} alt={p.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" loading="lazy" />
+                      <img src={p.image} alt={p.title} className="h-full w-full object-cover object-[50%_32%] transition duration-700 group-hover:scale-110" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-900/20 to-transparent" />
                       {p.featured && <span className="absolute right-4 top-4 rounded-full bg-gold-500 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-navy-900">Most Popular</span>}
                       <h3 className="absolute bottom-3 left-5 right-5 font-serif text-2xl font-semibold text-white">{p.title}</h3>
@@ -302,7 +302,7 @@ export default function HomeLandingPage() {
                 className="h-80"
                 front={
                   <div className="relative h-full w-full">
-                    <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" />
+                    <img src={image} alt="" className="h-full w-full object-cover object-[50%_25%]" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-900/45 to-navy-900/10" />
                     <span className="absolute right-5 top-4 font-serif text-5xl font-semibold italic text-white/25">
                       {String(i + 1).padStart(2, "0")}

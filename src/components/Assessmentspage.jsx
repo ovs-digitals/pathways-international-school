@@ -8,7 +8,7 @@ const PHILOSOPHY = ["Learn Online", "Assess Physically or Online", "Improve Cont
 export default function AssessmentsPage() {
   return (
     <main className="bg-white text-slate-900">
-      <PageHero eyebrow="About Pathways" title="Assessments &" accent="Examinations" image="o_level.webp"
+      <PageHero eyebrow="About Pathways" title="Assessments &" accent="Examinations" image="st-stream-science.webp"
         text="Assessment is a central part of the Pathways Hybrid Learning Model." />
 
       <section className="px-4 py-20 sm:px-6 lg:px-8">

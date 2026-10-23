@@ -20,21 +20,21 @@ const steps = [
     title: "Submit the application",
     short: "Application form + documents",
     text: "Fill out and submit the application of admission form. Please provide accurate parent/guardian contact details (phone numbers and email addresses) and scanned copies of the required documents.",
-    image: "curriculam.webp",
+    image: "hero-bg3.webp",
   },
   {
     icon: ClipboardCheck,
     title: "Entrance test & interview",
     short: "Scheduled after submission",
     text: "After you submit the application, you receive a schedule for an entrance test and an interview with the applicant and parents.",
-    image: "junior.webp",
+    image: "st-stream-science.webp",
   },
   {
     icon: Wallet,
     title: "Pay the processing fee",
     short: "Non-refundable, per application",
     text: "After the entrance test and interview, a non-refundable application processing fee is paid for each application. Paying the fee does not by itself guarantee admission.",
-    image: "o_level.webp",
+    image: "st-stream-it.webp",
   },
   {
     icon: BadgeCheck,
@@ -81,9 +81,9 @@ const ageExamples = [
 ];
 
 const programs = [
-  { title: "Pre-IGCSE", text: "Foundation programme", image: "teacherwithstudents.webp", to: "/pre-igcse" },
+  { title: "Pre-IGCSE", text: "Foundation programme", image: "st-young-learner.webp", to: "/pre-igcse" },
   { title: "IGCSE / O Levels", text: "Two-year programme", image: "senior.webp", to: "/igcse" },
-  { title: "A Levels", text: "International AS & A2", image: "seniorstudent.webp", to: "/international-as-levels" },
+  { title: "A Levels", text: "International AS & A2", image: "senior.webp", to: "/international-as-levels" },
 ];
 
 export default function AdmissionsPage() {
@@ -111,7 +111,7 @@ export default function AdmissionsPage() {
         eyebrow="Admissions & Eligibility"
         title="Your child's journey"
         accent="starts here."
-        image="community.webp"
+        image="hero-bg2.webp"
         text="A clear, fair and transparent admissions journey, with our team guiding your family at every step."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
@@ -183,7 +183,7 @@ export default function AdmissionsPage() {
           {/* detail panel */}
           <div key={active} className="panel-in mt-10 grid overflow-hidden rounded-3xl bg-white shadow-2xl shadow-navy-950/10 ring-1 ring-slate-100 md:grid-cols-[0.9fr_1.1fr]">
             <div className="relative min-h-64">
-              <img src={step.image} alt="" className="kenburns absolute inset-0 h-full w-full object-cover" />
+              <img src={step.image} alt="" className="kenburns absolute inset-0 h-full w-full object-cover object-[50%_25%]" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 to-transparent" />
               <span className="absolute bottom-5 left-5 font-serif text-7xl font-semibold italic text-white/90">0{active + 1}</span>
             </div>
@@ -298,7 +298,7 @@ export default function AdmissionsPage() {
             {programs.map((p, i) => (
               <Reveal key={p.title} variant="zoom" delay={i * 0.12}>
                 <Link to={p.to} className="group relative block h-80 overflow-hidden rounded-3xl shadow-xl shadow-navy-950/10">
-                  <img src={p.image} alt="" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                  <img src={p.image} alt="" className="h-full w-full object-cover object-[50%_25%] transition duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-900/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                     <GraduationCap className="h-8 w-8 text-gold-400 transition group-hover:-translate-y-1" />

@@ -30,7 +30,7 @@ export default function FeeStructurePage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid place-items-center bg-emerald-900 px-6 py-10 text-white">
             <img
-              src="/logo.webp"
+              src="logo.webp"
               alt="Pathways International School"
               className="h-20 w-auto object-contain sm:h-28"
             />

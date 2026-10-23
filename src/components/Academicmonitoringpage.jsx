@@ -14,7 +14,7 @@ const ITEMS = [
 export default function AcademicMonitoringPage() {
   return (
     <main className="bg-white text-slate-900">
-      <PageHero eyebrow="About Pathways" title="Student Academic" accent="Monitoring" image="curriculam.webp"
+      <PageHero eyebrow="About Pathways" title="Student Academic" accent="Monitoring" image="hero-bg2.webp"
         text="Every student's academic journey is followed closely — online, on campus and at home." />
 
       <section className="px-4 py-20 sm:px-6 lg:px-8">

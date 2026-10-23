@@ -15,7 +15,7 @@ import { SessionTimeline, useSeries } from "./SessionDates";
    portal (LMS) gives you → 60% rule → fees → FAQ → Sign up (at the end).
 ===================================================================== */
 
-const SLIDES = ["/o_level.webp", "/curriculam.webp", "/seniorstudent.webp", "/hero-students.webp"];
+const SLIDES = ["st-stream-science.webp", "st-stream-science.webp", "st-stream-humanities.webp", "hero-bg1.webp", "st-stream-business.webp"];
 
 const steps = [
   { n: "01", icon: FileText, title: "Introduction form", text: "Choose your exams like on the British Council site — level, session, city and subjects — then add your name, contact and ID." },
@@ -103,8 +103,16 @@ export default function PrivateCandidatesPage() {
       {/* ================= HOW IT WORKS (bento cards) ================= */}
       <section id="journey" className="scroll-mt-28 bg-navy-900 py-16 text-white md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.25em] text-gold-400">How it works</p>
-          <h2 className="mt-3 text-center text-3xl font-extrabold md:text-5xl">From form to <span className="text-gold-400">exam hall</span></h2>
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-400">Your exam journey</p>
+              <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-5xl">Six simple steps to <span className="text-gold-400">your exam day</span></h2>
+              <p className="mt-4 max-w-lg text-base leading-7 text-white/70">Register online, practise with free mock tests, and we take care of your British Council entry — your SOE, results and certificate all arrive in your portal.</p>
+            </div>
+            <div className="overflow-hidden rounded-3xl ring-1 ring-gold-500/30 shadow-2xl">
+              <img src="st-stream-science.webp" alt="Student sitting an exam" className="h-64 w-full object-cover object-[50%_25%] md:h-72" loading="lazy" />
+            </div>
+          </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {steps.map(({ n, icon: Icon, title, text }, i) => (
               <article key={n} className={`group relative overflow-hidden rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 ${i === 2 || i === 3 ? "bg-gold-500 text-navy-900" : "bg-white/[0.06] ring-1 ring-white/10 hover:bg-white/[0.1]"}`}>

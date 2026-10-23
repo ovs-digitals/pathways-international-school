@@ -63,7 +63,7 @@ export default function IgcsePathway({ intro = true, id = "igcse-pathway" }) {
         {/* ---------- header ---------- */}
         <div className={`${intro ? "mt-14" : ""} text-center`}>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-700">IGCSE / O Levels</p>
-          <h2 className="mt-3 font-serif text-3xl font-semibold text-navy-800 md:text-5xl">Complete 2-Year Academic Pathway</h2>
+          <h2 className="mt-3 font-serif text-3xl font-semibold text-navy-800 md:text-5xl">Complete 2-Years Academic Pathway</h2>
           <span className="gold-rule mt-5" />
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

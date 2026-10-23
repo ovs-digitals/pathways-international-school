@@ -6,12 +6,12 @@ import { AGES, FEES } from "./siteData";
 /* International AS Levels and International A2 Levels (one page each) */
 const LEVELS = {
   AS: {
-    title: "International AS Levels", eyebrow: "International A Levels · Year 1", units: ["Unit 1", "Unit 2"],
+    title: "International AS Levels", eyebrow: "International A Levels · Year 1", image: "hero-bg1.webp", pos: "50% 30%", units: ["Unit 1", "Unit 2"],
     eligibility: "IGCSE / O Levels with 5 subjects including Mathematics and English, or Matric with 60% marks",
     text: "International AS Level represents the first stage of the International A Level qualification and is designed for students preparing for university-level academic progression. Pathways delivers International AS Level through a structured hybrid (Online & Campus Based) system.",
   },
   A2: {
-    title: "International A2 Levels", eyebrow: "International A Levels · Year 2", units: ["Unit 3", "Unit 4"],
+    title: "International A2 Levels", eyebrow: "International A Levels · Year 2", image: "st-stream-humanities.webp", pos: "50% 42%", units: ["Unit 3", "Unit 4"],
     eligibility: "International AS Level completed in the same 3 subjects",
     text: "International A2 represents the advanced stage of the International A Level pathway. Students build on the knowledge acquired during AS Level and develop deeper subject understanding, analytical skills and independent academic ability. Pathways delivers International A2 Level through a structured hybrid (Online & Campus Based) system.",
   },
@@ -22,10 +22,10 @@ export default function ALevelPage({ level = "AS" }) {
   const terms = alTerms(L.units);
   return (
     <main className="bg-[#f6f8fc] text-slate-900">
-      <section className="relative flex min-h-[520px] items-start overflow-hidden bg-navy-950 text-white lg:min-h-[600px]">
-        <img data-rv="1" src="/prog-alevel.webp" alt="" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top lg:w-[62%]" style={{ WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 28%)", maskImage: "linear-gradient(90deg, transparent 0%, #000 28%)" }} />
+      <section className="relative flex min-h-[520px] items-center overflow-hidden bg-navy-950 text-white lg:min-h-[600px]">
+        <img data-rv="1" src={L.image} alt="" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top lg:w-[62%]" style={{ objectPosition: L.pos, WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 28%)", maskImage: "linear-gradient(90deg, transparent 0%, #000 28%)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(10,24,44,.97) 0%, rgba(10,24,44,.92) 38%, rgba(14,33,57,.55) 62%, rgba(14,33,57,.05) 100%)" }} />
-        <div className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-8 sm:px-6 md:pt-10 lg:px-8">
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
           <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-200 backdrop-blur">{L.eyebrow}</p>
           <h1 className="mt-5 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">{L.title}</h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">{L.text}</p>

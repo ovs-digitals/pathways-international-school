@@ -11,10 +11,10 @@ const TERMS = [
 export default function PreIGCSEProgram() {
   return (
     <main className="bg-[#f6f8fc] text-slate-900">
-      <section className="relative flex min-h-[520px] items-start overflow-hidden bg-navy-950 text-white lg:min-h-[600px]">
-        <img data-rv="1" src="prog-preigcse.webp" alt="" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top lg:w-[62%]" style={{ WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 28%)", maskImage: "linear-gradient(90deg, transparent 0%, #000 28%)" }} />
+      <section className="relative flex min-h-[520px] items-center overflow-hidden bg-navy-950 text-white lg:min-h-[600px]">
+        <img data-rv="1" src="st-young-learner.webp" alt="" className="absolute inset-y-0 right-0 h-full w-full object-cover lg:w-[62%]" style={{ objectPosition: "50% 22%", WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 28%)", maskImage: "linear-gradient(90deg, transparent 0%, #000 28%)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(10,24,44,.97) 0%, rgba(10,24,44,.92) 38%, rgba(14,33,57,.55) 62%, rgba(14,33,57,.05) 100%)" }} />
-        <div className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-8 sm:px-6 md:pt-10 lg:px-8">
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
           <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-200 backdrop-blur">Foundation Programme · Before IGCSE</p>
           <h1 className="mt-5 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">Pre-IGCSE Program</h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">

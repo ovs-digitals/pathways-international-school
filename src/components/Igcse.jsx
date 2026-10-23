@@ -56,7 +56,7 @@ export default function IGCSETwoYearProgram() {
       title: "Science / Medical",
       tag: "Pre-Medical & Engineering",
       icon: FlaskConical,
-      image: "seniorstudent.webp",
+      image: "st-stream-science.webp",
       subjects: ["Mathematics Part 2", "Physics", "Chemistry", "Biology"],
     },
     {
@@ -64,7 +64,7 @@ export default function IGCSETwoYearProgram() {
       title: "IT / Computer",
       tag: "Computing & Technology",
       icon: Laptop,
-      image: "junior.webp",
+      image: "st-stream-it.webp",
       subjects: ["Mathematics Part 2", "Physics", "Chemistry", "Computer Science"],
     },
     {
@@ -80,7 +80,7 @@ export default function IGCSETwoYearProgram() {
       title: "Humanities",
       tag: "Social Sciences & Arts",
       icon: Globe2,
-      image: "curriculam.webp",
+      image: "st-stream-humanities.webp",
       subjects: ["Global Citizenship", "History", "Geography", "Mathematics Part 2"],
     },
   ];

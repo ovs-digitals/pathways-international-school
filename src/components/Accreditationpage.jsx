@@ -23,12 +23,12 @@ const ITEMS = [
     text: "Our association with the British Council reflects our commitment to quality education, global best practices and internationally aligned teaching and learning approaches.",
   },
   {
-    logo: "partners/auspak-gujranwala.webp", note: "",
+    logo: "partners/auspak-intl.webp", note: "",
     title: "AusPak International", sub: "International Education & Student Support Partner",
     text: "AusPak International supports our international outreach, student facilitation and global education services, helping learners access opportunities across multiple education systems.",
   },
   {
-    logo: "partners/ucas-approved.webp", note: "",
+    logo: "partners/ucas.webp", note: "",
     title: "UCAS", sub: "Approved Centre · Universities and Colleges Admissions Service, UK",
     text: "As a UCAS-approved centre, we support students with official guidance and processes for UK university applications. This affiliation enables our learners to confidently apply to top universities in the UK and beyond.",
   },
@@ -37,7 +37,7 @@ const ITEMS = [
 export default function AccreditationPage() {
   return (
     <main className="bg-white text-slate-900">
-      <PageHero eyebrow="About Pathways" title="Accreditation &" accent="Affiliations" image="community.webp"
+      <PageHero eyebrow="About Pathways" title="Accreditation &" accent="Affiliations" image="hero-students.webp" pos="50% 45%"
         text="Recognised in Pakistan and connected worldwide — the bodies and partners that stand behind a Pathways education." />
 
       <section className="px-4 py-20 sm:px-6 lg:px-8">

@@ -91,10 +91,10 @@ const JOBS = [
 ];
 
 const perks = [
-  { icon: Award, title: "Professional Environment", text: "A respectful culture with clear processes and real support.", image: "/senior.webp" },
-  { icon: Sparkles, title: "Growth & Training", text: "Ongoing development and upskilling opportunities.", image: "/curriculam.webp" },
-  { icon: Users, title: "Supportive Team", text: "Collaborative planning, mentoring and shared resources.", image: "/community.webp" },
-  { icon: CheckCircle2, title: "Impactful Work", text: "Make a measurable difference in learners' lives.", image: "/seniorstudent.webp" },
+  { icon: Award, title: "Professional Environment", text: "A respectful culture with clear processes and real support.", image: "senior.webp" },
+  { icon: Sparkles, title: "Growth & Training", text: "Ongoing development and upskilling opportunities.", image: "st-stream-humanities.webp" },
+  { icon: Users, title: "Supportive Team", text: "Collaborative planning, mentoring and shared resources.", image: "hero-bg2.webp" },
+  { icon: CheckCircle2, title: "Impactful Work", text: "Make a measurable difference in learners' lives.", image: "hero-bg1.webp" },
 ];
 
 const steps = [
@@ -144,7 +144,7 @@ export default function CareersPage() {
 
   return (
     <main className="overflow-hidden bg-[#f6f8fc] text-slate-900">
-      <PageHero eyebrow="Careers at Pathways" title="Build a career that" accent="shapes futures." image="/seniorstudents.webp">
+      <PageHero eyebrow="Careers at Pathways" title="Build a career that" accent="shapes futures." image="seniorstudents.webp">
         <p className="font-serif text-2xl text-white/90 md:text-3xl">
           <Typewriter words={["Teach.", "Inspire.", "Grow.", "Make an impact."]} className="italic text-gold-400" />
         </p>
