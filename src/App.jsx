@@ -34,10 +34,10 @@ import { PortalLogin, StudentPortal, StaffPortal } from "./components/portal/Por
 import { DemoProvider } from "./components/portal/DemoStore";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ChatBot from "./components/ChatBot";
-import UniversityPlacementPage from "./components/UniversityPlacementPage";
-import AccreditationPage from "./components/AccreditationPage";
-import AssessmentsPage from "./components/AssessmentsPage";
-import AcademicMonitoringPage from "./components/AcademicMonitoringPage";
+import UniversityPlacementPage from "./components/Universityplacementpage";
+import AccreditationPage from "./components/Accreditationpage";
+import AssessmentsPage from "./components/Assessmentspage";
+import AcademicMonitoringPage from "./components/Academicmonitoringpage";
 import AdmissionPopup from "./components/AdmissionPopup";
 import ScrollReveal from "./components/ScrollReveal";
 import ApplyModal from "./components/ApplyModal";
