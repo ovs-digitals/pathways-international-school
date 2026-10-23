@@ -20,28 +20,28 @@ const steps = [
     title: "Submit the application",
     short: "Application form + documents",
     text: "Fill out and submit the application of admission form. Please provide accurate parent/guardian contact details (phone numbers and email addresses) and scanned copies of the required documents.",
-    image: "/curriculam.webp",
+    image: "curriculam.webp",
   },
   {
     icon: ClipboardCheck,
     title: "Entrance test & interview",
     short: "Scheduled after submission",
     text: "After you submit the application, you receive a schedule for an entrance test and an interview with the applicant and parents.",
-    image: "/junior.webp",
+    image: "junior.webp",
   },
   {
     icon: Wallet,
     title: "Pay the processing fee",
     short: "Non-refundable, per application",
     text: "After the entrance test and interview, a non-refundable application processing fee is paid for each application. Paying the fee does not by itself guarantee admission.",
-    image: "/o_level.webp",
+    image: "o_level.webp",
   },
   {
     icon: BadgeCheck,
     title: "Offer & confirmation",
     short: "Welcome to Pathways",
     text: "Once an offer is made, the confirmation formalities are shared with parents, and your child is ready to begin their Pathways journey.",
-    image: "/seniorstudents.webp",
+    image: "seniorstudents.webp",
   },
 ];
 
@@ -81,9 +81,9 @@ const ageExamples = [
 ];
 
 const programs = [
-  { title: "Pre-IGCSE", text: "Foundation programme", image: "/teacherwithstudents.webp", to: "/pre-igcse" },
-  { title: "IGCSE / O Levels", text: "Two-year programme", image: "/senior.webp", to: "/igcse" },
-  { title: "A Levels", text: "International AS & A2", image: "/seniorstudent.webp", to: "/international-as-levels" },
+  { title: "Pre-IGCSE", text: "Foundation programme", image: "teacherwithstudents.webp", to: "/pre-igcse" },
+  { title: "IGCSE / O Levels", text: "Two-year programme", image: "senior.webp", to: "/igcse" },
+  { title: "A Levels", text: "International AS & A2", image: "seniorstudent.webp", to: "/international-as-levels" },
 ];
 
 export default function AdmissionsPage() {
@@ -111,7 +111,7 @@ export default function AdmissionsPage() {
         eyebrow="Admissions & Eligibility"
         title="Your child's journey"
         accent="starts here."
-        image="/community.webp"
+        image="community.webp"
         text="A clear, fair and transparent admissions journey, with our team guiding your family at every step."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
@@ -125,7 +125,7 @@ export default function AdmissionsPage() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:border-gold-400 hover:text-gold-300"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-[#25D366]/30 transition hover:bg-[#1fb457]"
           >
             <WhatsAppIcon className="h-5 w-5" /> Ask admissions
           </a>

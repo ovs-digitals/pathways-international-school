@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, MapPin, Phone } from "lucide-react";
-import { ADDRESS, ADDRESS_LINES, CONTACT, MAP_QUERY } from "./siteData";
+import { ADDRESS, ADDRESS_LINES, CONTACT, MAP_QUERY, waLinkTo } from "./siteData";
+import { WhatsAppIcon } from "./WhatsAppButton";
 
 // Both Pakistan offices — used on Home, Contact and in the footer
 export const OFFICES = [
@@ -34,8 +35,8 @@ export default function OfficeLocations({ eyebrow = "Head office", title = "Our 
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="flex flex-col gap-4">
+        <div className="mt-12 grid items-center gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="flex flex-col justify-center gap-4">
             {OFFICES.map((o, i) => {
               const on = i === active;
               return (
@@ -71,11 +72,13 @@ export default function OfficeLocations({ eyebrow = "Head office", title = "Our 
                     ))}
                   </div>
                   <a
-                    href={o.phoneHref}
+                    href={waLinkTo()}
+                    target="_blank"
+                    rel="noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-navy-700 hover:text-gold-700"
+                    className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-bold text-white shadow-md shadow-[#25D366]/30 transition hover:bg-[#1fb457]"
                   >
-                    <Phone className="h-4 w-4" /> {o.phone}
+                    <WhatsAppIcon className="h-4 w-4" /> {o.phone}
                   </a>
                 </button>
               );

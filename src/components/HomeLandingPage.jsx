@@ -31,18 +31,18 @@ import { ADDRESS, LOWEST_MONTHLY, pkr, waLinkTo } from "./siteData";
 const partners = [
   {
     label: "Pearson Edexcel",
-    image: "/partners/pearson-edexcel.webp",
+    image: "partners/pearson-edexcel.webp",
     monochrome: true,
     detail: "Approved Centre No. 97911",
   },
   {
     label: "Government of Punjab",
-    image: "/partners/punjab.webp",
+    image: "partners/punjab.webp",
     detail: "Licensed by School Education Dept.",
   },
   {
     label: "Olevels Virtual School",
-    image: "/partners/olevels.webp",
+    image: "partners/olevels.webp",
     detail: "A project of Olevels Virtual School, UK",
   },
 ];
@@ -59,19 +59,19 @@ const promises = [
   {
     icon: Globe2,
     title: "A Fully Online School",
-    image: "/community.webp",
+    image: "community.webp",
     text: "Live online classes, recorded lessons and teachers who know you by name — a complete school on your screen, with full regular-student status.",
   },
   {
     icon: ShieldCheck,
     title: "Zero-Tuition Policy",
-    image: "/senior.webp",
+    image: "senior.webp",
     text: "Everything is taught properly in class, so there is no need for extra tuition or private coaching.",
   },
   {
     icon: BookOpenCheck,
     title: "Your School Travels With You",
-    image: "/curriculam.webp",
+    image: "curriculam.webp",
     text: "At home, in another city or on your travels — your classes, notes and teachers go wherever you go.",
   },
 ];
@@ -81,7 +81,7 @@ const programs = [
     no: "01",
     title: "Pre-IGCSE",
     subtitle: "Foundation Programme",
-    image: "/teacherwithstudents.webp",
+    image: "teacherwithstudents.webp",
     text: "Build the subject foundations needed to move confidently into IGCSE / O Levels.",
     facts: ["1 Year", "2 Terms", "Foundation"],
     points: ["Mathematics, English & Sciences", "Computer Science & Islamic Studies", "Smooth progression into IGCSE"],
@@ -91,7 +91,7 @@ const programs = [
     no: "02",
     title: "IGCSE / O Levels",
     subtitle: "International GCSE",
-    image: "/o_level.webp",
+    image: "o_level.webp",
     text: "A globally recognised qualification that opens doors to leading colleges and universities.",
     facts: ["2 Years", "3 Terms", "Pearson Edexcel"],
     to: "/igcse",
@@ -101,7 +101,7 @@ const programs = [
     no: "03",
     title: "A Levels",
     subtitle: "International AS & A2",
-    image: "/seniorstudent.webp",
+    image: "seniorstudent.webp",
     text: "Advanced subject depth with personal mentoring and university-ready preparation.",
     facts: ["AS + A2", "Regular", "Self-Paced"],
     to: "/international-as-levels",
@@ -331,29 +331,6 @@ export default function HomeLandingPage() {
         </div>
       </section>
 
-      {/* ================= LIVE CLASSES ACROSS PAKISTAN ================= */}
-      <section className="mt-14 overflow-hidden bg-navy-800 py-10 text-white">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-gold-300">
-            <span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" /></span>
-            Live now · online interactive classes
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-semibold md:text-4xl">Pakistan's first online <span className="italic text-gold-400">live interactive</span> school</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/75 md:text-base">Real teachers, real-time classes and a full school timetable — for students all over Pakistan.</p>
-        </div>
-        <div className="mt-7 border-y border-white/10 bg-white/[0.04] py-4">
-          <div className="pathways-marquee flex w-max gap-10 whitespace-nowrap">
-            {[0, 1, 2, 3].flatMap((k) => ["Live Interactive Classes", "Pearson Edexcel Centre", "IGCSE / O Levels", "International A Levels", "Mock Tests & Feedback", "Recorded Lessons", "Expert Teachers", "Affordable Fees"].map((c) => (
-              <span key={c + k} className="inline-flex items-center gap-3 text-lg font-semibold text-white/90">
-                <span className="h-2 w-2 rounded-full bg-gold-400" />{c}
-              </span>
-            )))}
-          </div>
-        </div>
-      </section>
-
-      <PakistanMap />
-
       {/* ================= HOW IT WORKS ================= */}
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -385,6 +362,8 @@ export default function HomeLandingPage() {
         </div>
       </section>
 
+      <PakistanMap />
+
       {/* ================= A DAY AT PATHWAYS (online) ================= */}
       <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
@@ -406,6 +385,27 @@ export default function HomeLandingPage() {
                 <p className="mt-1 text-sm leading-6 text-slate-600">{d}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= LIVE CLASSES ACROSS PAKISTAN ================= */}
+      <section className="mt-14 overflow-hidden bg-navy-800 py-10 text-white">
+        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-gold-300">
+            <span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" /></span>
+            Live now · online interactive classes
+          </p>
+          <h2 className="mt-3 font-serif text-3xl font-semibold md:text-4xl">Pakistan's first online <span className="italic text-gold-400">live interactive</span> school</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/75 md:text-base">Real teachers, real-time classes and a full school timetable — for students all over Pakistan.</p>
+        </div>
+        <div className="mt-7 border-y border-white/10 bg-white/[0.04] py-4">
+          <div className="pathways-marquee flex w-max gap-10 whitespace-nowrap">
+            {[0, 1, 2, 3].flatMap((k) => ["Live Interactive Classes", "Pearson Edexcel Centre", "IGCSE / O Levels", "International A Levels", "Mock Tests & Feedback", "Recorded Lessons", "Expert Teachers", "Affordable Fees"].map((c) => (
+              <span key={c + k} className="inline-flex items-center gap-3 text-lg font-semibold text-white/90">
+                <span className="h-2 w-2 rounded-full bg-gold-400" />{c}
+              </span>
+            )))}
           </div>
         </div>
       </section>

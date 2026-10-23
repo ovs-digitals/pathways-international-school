@@ -34,6 +34,10 @@ import { PortalLogin, StudentPortal, StaffPortal } from "./components/portal/Por
 import { DemoProvider } from "./components/portal/DemoStore";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ChatBot from "./components/ChatBot";
+import UniversityPlacementPage from "./components/UniversityPlacementPage";
+import AccreditationPage from "./components/AccreditationPage";
+import AssessmentsPage from "./components/AssessmentsPage";
+import AcademicMonitoringPage from "./components/AcademicMonitoringPage";
 import AdmissionPopup from "./components/AdmissionPopup";
 import ScrollReveal from "./components/ScrollReveal";
 import ApplyModal from "./components/ApplyModal";
@@ -64,8 +68,12 @@ export default function App() {
         <Route path="/campuses/:id" element={<CampusDetails />} />
         <Route path="/events/:id" element={<CampusDetails />} />
         <Route path="/welcome" element={<PathwaysWelcomePage />} />
+        <Route path="/university-placement" element={<UniversityPlacementPage />} />
         <Route path="/director-message" element={<Navigate to="/welcome" replace />} />
-        <Route path="/affiliations-accreditations" element={<Navigate to="/" replace />} />
+        <Route path="/affiliations-accreditations" element={<Navigate to="/accreditation-affiliations" replace />} />
+        <Route path="/accreditation-affiliations" element={<AccreditationPage />} />
+        <Route path="/assessments-examinations" element={<AssessmentsPage />} />
+        <Route path="/academic-monitoring" element={<AcademicMonitoringPage />} />
         <Route path="/success" element={<Navigate to="/" replace />} />
         <Route path="/private-candidates" element={<PrivateCandidatesPage />} />
         <Route path="/private-candidates/signup" element={<SignupPage />} />

@@ -56,7 +56,7 @@ export default function IGCSETwoYearProgram() {
       title: "Science / Medical",
       tag: "Pre-Medical & Engineering",
       icon: FlaskConical,
-      image: "/seniorstudent.webp",
+      image: "seniorstudent.webp",
       subjects: ["Mathematics Part 2", "Physics", "Chemistry", "Biology"],
     },
     {
@@ -64,7 +64,7 @@ export default function IGCSETwoYearProgram() {
       title: "IT / Computer",
       tag: "Computing & Technology",
       icon: Laptop,
-      image: "/junior.webp",
+      image: "junior.webp",
       subjects: ["Mathematics Part 2", "Physics", "Chemistry", "Computer Science"],
     },
     {
@@ -72,7 +72,7 @@ export default function IGCSETwoYearProgram() {
       title: "Business",
       tag: "Commerce & Management",
       icon: BriefcaseBusiness,
-      image: "/senior.webp",
+      image: "senior.webp",
       subjects: ["Business Studies", "Economics", "Accounting", "Mathematics Part 2"],
     },
     {
@@ -80,7 +80,7 @@ export default function IGCSETwoYearProgram() {
       title: "Humanities",
       tag: "Social Sciences & Arts",
       icon: Globe2,
-      image: "/curriculam.webp",
+      image: "curriculam.webp",
       subjects: ["Global Citizenship", "History", "Geography", "Mathematics Part 2"],
     },
   ];
@@ -92,7 +92,7 @@ export default function IGCSETwoYearProgram() {
           HERO
       ====================================================== */}
       <section className="relative flex min-h-[520px] items-start overflow-hidden bg-navy-950 text-white lg:min-h-[600px]">
-        <img data-rv="1" src="/prog-igcse.webp" alt="" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top lg:w-[62%]" style={{ WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 28%)", maskImage: "linear-gradient(90deg, transparent 0%, #000 28%)" }} />
+        <img data-rv="1" src="prog-igcse.webp" alt="" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top lg:w-[62%]" style={{ WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 28%)", maskImage: "linear-gradient(90deg, transparent 0%, #000 28%)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(10,24,44,.97) 0%, rgba(10,24,44,.92) 38%, rgba(14,33,57,.55) 62%, rgba(14,33,57,.05) 100%)" }} />
 
         {/* Decorative Glow */}

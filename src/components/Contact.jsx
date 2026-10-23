@@ -18,11 +18,11 @@ const channels = [
   },
   {
     icon: Phone,
-    title: "Call Us",
+    title: "Call / WhatsApp",
     value: CONTACT.phone,
     note: "Admissions helpline",
     href: CONTACT.phoneHref,
-    accent: "bg-navy-700 text-gold-400",
+    accent: "bg-[#25D366] text-white",
   },
   {
     icon: Phone,
@@ -72,7 +72,7 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Let's start a"
         accent="conversation."
-        image="/curriculam.webp"
+        image="st-stream-it.webp"
         text="Questions about admissions, programmes or private candidates? Our team is here to help — choose the way that suits you best."
       />
 

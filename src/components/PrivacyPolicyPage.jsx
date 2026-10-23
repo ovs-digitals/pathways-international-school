@@ -1,108 +1,210 @@
-import { useEffect } from "react";
+import { useState } from "react";
+import { ArrowRight, Clock, MapPin, Phone, Send } from "lucide-react";
+import { PageHero, Reveal, TiltCard } from "./Motion";
+import { WHATSAPP_LINK, WHATSAPP_NUMBER, WhatsAppIcon } from "./WhatsAppButton";
+import OfficeLocations, { OFFICES, mapUrl } from "./OfficeLocations";
 import { CONTACT } from "./siteData";
 
-const sections = [
+
+const channels = [
   {
-    title: "Information We Collect",
-    text: "We may collect personal information that you voluntarily provide to us when you express interest in our O Level, IGCSE, or hybrid schooling programs, enroll in courses, or contact us. This may include:",
-    items: [
-      "Personal Identification Details: Full name, parent/guardian name, student's name, and date of birth.",
-      "Contact Information: Email address, phone/WhatsApp number, and residential address.",
-      "Educational Information: Current grade level, academic background, and specific subjects or curriculums (e.g., Pearson Edexcel, Cambridge O Levels/IGCSE) of interest.",
-      "Technical Data: IP address, browser type, device information, and browsing behavior collected automatically via cookies when you use our website or online learning management systems (LMS).",
-    ],
+    icon: WhatsAppIcon,
+    title: "WhatsApp",
+    value: "Chat with admissions",
+    note: "Fastest reply",
+    href: WHATSAPP_LINK,
+    external: true,
+    accent: "bg-[#25D366] text-white",
   },
   {
-    title: "How We Use Your Information",
-    text: "We use the information we collect for legitimate educational and administrative purposes, including:",
-    items: [
-      "Responding to your inquiries regarding admissions, fee structures, and hybrid/online class schedules.",
-      "Processing applications and managing student enrollment for O Level and IGCSE programs.",
-      "Facilitating online and hybrid learning delivery, communication, and student assessments.",
-      "Sending important updates, school newsletters, promotional materials, or admission deadlines (you can opt-out at any time).",
-      "Improving our website functionality, online portals, and marketing campaigns (including Meta/Facebook advertising).",
-    ],
+    icon: Phone,
+    title: "Call / WhatsApp",
+    value: CONTACT.phone,
+    note: "Admissions helpline",
+    href: CONTACT.phoneHref,
+    accent: "bg-[#25D366] text-white",
   },
   {
-    title: "How We Share Your Information",
-    text: "We respect your privacy and do not sell, trade, or rent your personal information to third parties. We may share your data only under the following circumstances:",
-    items: [
-      "Service Providers: Trusted third-party vendors who assist us in operating our website, hosting our learning management systems, or managing communications (bound by strict confidentiality agreements).",
-      "Legal Requirements: When required by law, regulation, or legal process to protect the rights, property, or safety of Pathways International School, our students, or others.",
-    ],
+    icon: Phone,
+    title: "Landline",
+    value: CONTACT.landline,
+    note: "Office line",
+    href: CONTACT.landlineHref,
+    accent: "bg-navy-700 text-gold-400",
   },
   {
-    title: "Data Security",
-    text: "We implement appropriate technical, administrative, and physical security measures to protect your personal data from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.",
-  },
-  {
-    title: "Your Data Protection Rights",
-    text: "Depending on your jurisdiction, you have the right to:",
-    items: [
-      "Access, update, or correct the personal information we hold about you.",
-      "Request the deletion of your personal data, subject to legal or educational retention requirements.",
-      'Opt-out of marketing communications at any time by clicking "unsubscribe" in our emails or replying "STOP" to our messages.',
-    ],
-  },
-  {
-    title: "Children's Privacy",
-    text: "Our online services are intended for parents, guardians, and students exploring educational programs. We do not knowingly collect personal data directly from children under the age of 13 without parental consent.",
-  },
-  {
-    title: "Changes to This Privacy Policy",
-    text: 'We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any updates will be posted on this page with a revised "Effective Date."',
+    icon: Send,
+    title: "Email",
+    value: CONTACT.email,
+    note: "For detailed queries",
+    href: `mailto:${CONTACT.email}`,
+    accent: "bg-gold-500 text-navy-900",
   },
 ];
 
-export default function PrivacyPolicyPage() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = "Privacy Policy | Pathways International School";
-    window.scrollTo(0, 0);
-    return () => { document.title = previousTitle; };
-  }, []);
+const topics = ["Admissions", "Private Candidates", "Programmes & Subjects", "Fee Information", "Other"];
 
-  const linkClass = "break-words text-emerald-700 underline underline-offset-4 hover:text-emerald-900";
+export default function ContactPage() {
+  const [form, setForm] = useState({ name: "", phone: "", topic: topics[0], message: "" });
+  const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const text = [
+      "Assalam o Alaikum, Pathways International School.",
+      `Name: ${form.name}`,
+      form.phone && `Phone: ${form.phone}`,
+      `Topic: ${form.topic}`,
+      "",
+      form.message,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+  }
+
+  const field =
+    "w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-gold-400 focus:ring-4 focus:ring-gold-100";
 
   return (
-    <main className="bg-white text-slate-900">
-      <header className="bg-emerald-900 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <p className="text-sm text-white/80">Pathways International School</p>
-          <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">Privacy Policy</h1>
-          <p className="mt-4 text-sm text-white/80">
-            Effective Date: <time dateTime="2026-09-30">September 30, 2026</time>
-          </p>
+    <main className="overflow-hidden bg-[#f6f8fc] text-slate-900">
+      <PageHero
+        eyebrow="Contact Us"
+        title="Let's start a"
+        accent="conversation."
+        image="curriculam.webp"
+        text="Questions about admissions, programmes or private candidates? Our team is here to help — choose the way that suits you best."
+      />
+
+      {/* ================= CHANNELS ================= */}
+      <section className="relative z-10 -mt-10 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {channels.map(({ icon: Icon, ...c }, i) => (
+            <Reveal key={c.title} variant="up" delay={i * 0.1}>
+              <a
+                href={c.href}
+                target={c.external ? "_blank" : undefined}
+                rel={c.external ? "noreferrer" : undefined}
+                className="block h-full"
+              >
+                <TiltCard className="group h-full rounded-3xl bg-white p-6 shadow-xl shadow-navy-950/10 ring-1 ring-slate-100 transition hover:ring-gold-300">
+                  <span className={`grid h-12 w-12 place-items-center rounded-2xl ${c.accent} transition group-hover:scale-110`}>
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <p className="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold-700">{c.title}</p>
+                  <p className="mt-1 break-words text-base font-bold text-navy-800">{c.value}</p>
+                  <p className="mt-1 text-xs text-slate-500">{c.note}</p>
+                  <ArrowRight className="mt-4 h-5 w-5 text-gold-600 transition group-hover:translate-x-1" />
+                </TiltCard>
+              </a>
+            </Reveal>
+          ))}
         </div>
-      </header>
-      <article aria-label="Privacy policy" className="mx-auto max-w-4xl space-y-10 px-4 py-10 leading-7 text-slate-700 sm:px-6 sm:py-14 lg:px-8">
-        <p>
-          At Pathways International School, we are committed to protecting the privacy and security of our students, parents, website visitors, and prospective families. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website, interact with our online and hybrid learning portals, or submit information through digital ads (such as Meta/Facebook lead forms).
-        </p>
-        {sections.map((section, index) => (
-          <section key={section.title} aria-labelledby={`privacy-section-${index + 1}`}>
-            <h2 id={`privacy-section-${index + 1}`} className="mb-4 text-2xl font-semibold text-emerald-900">
-              {index + 1}. {section.title}
-            </h2>
-            <p>{section.text}</p>
-            {section.items && (
-              <ul className="mt-4 list-disc space-y-3 pl-6 marker:text-emerald-700">
-                {section.items.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            )}
-          </section>
-        ))}
-        <section aria-labelledby="privacy-contact" className="rounded-2xl bg-slate-50 p-5 sm:p-8">
-          <h2 id="privacy-contact" className="mb-4 text-2xl font-semibold text-emerald-900">8. Contact Us</h2>
-          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how your data is handled, please contact us at:</p>
-          <address className="mt-5 space-y-3 not-italic">
-            <p><span className="font-semibold">School Name:</span> Pathways International School</p>
-            <p><span className="font-semibold">Website:</span> <a className={linkClass} href="https://www.pathwaysinternationalschool.edu.pk">www.pathwaysinternationalschool.edu.pk</a></p>
-            <p><span className="font-semibold">Email:</span> <a className={linkClass} href="mailto:info@pathwaysinternationalschool.edu.pk">info@pathwaysinternationalschool.edu.pk</a></p>
-            <p><span className="font-semibold">Phone:</span> <a className={linkClass} href={CONTACT.phoneHref}>{CONTACT.phone}</a></p>
-          </address>
-        </section>
-      </article>
+      </section>
+
+      {/* ================= FORM + VISIT ================= */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <Reveal variant="left">
+            <div className="gold-border">
+              <div className="rounded-[1.4rem] bg-white p-7 sm:p-10">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-700">Send a Message</p>
+                <h2 className="mt-2 font-serif text-3xl font-semibold text-navy-800 md:text-4xl">
+                  We'd love to <span className="italic text-gold-600">hear from you.</span>
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Fill in the form and press send — your message opens in WhatsApp, ready to deliver to
+                  our admissions team.
+                </p>
+
+                <form onSubmit={handleSubmit} className="mt-8 grid gap-4 sm:grid-cols-2">
+                  <label className="block">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-navy-700">Full Name</span>
+                    <input required value={form.name} onChange={set("name")} className={field} placeholder="Your name" />
+                  </label>
+                  <label className="block">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-navy-700">Phone (optional)</span>
+                    <input value={form.phone} onChange={set("phone")} className={field} placeholder="03XX XXXXXXX" />
+                  </label>
+                  <div className="sm:col-span-2">
+                    <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-navy-700">Topic</span>
+                    <div className="flex flex-wrap gap-2">
+                      {topics.map((t) => (
+                        <button
+                          type="button"
+                          key={t}
+                          onClick={() => setForm((f) => ({ ...f, topic: t }))}
+                          className={`rounded-full px-4 py-2 text-xs font-bold transition ${
+                            form.topic === t
+                              ? "bg-navy-700 text-gold-300 shadow-lg shadow-navy-950/20"
+                              : "bg-slate-100 text-slate-600 hover:bg-gold-100 hover:text-navy-800"
+                          }`}
+                        >
+                          {t}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <label className="block sm:col-span-2">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-navy-700">Message</span>
+                    <textarea
+                      required
+                      value={form.message}
+                      onChange={set("message")}
+                      className={`${field} min-h-[150px]`}
+                      placeholder="How can we help you?"
+                    />
+                  </label>
+                  <div className="sm:col-span-2">
+                    <button
+                      type="submit"
+                      className="btn-shimmer inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 px-8 py-4 text-sm font-bold uppercase tracking-wider text-navy-900 shadow-xl shadow-gold-500/25 transition hover:from-gold-300 hover:to-gold-400 sm:w-auto"
+                    >
+                      <WhatsAppIcon className="h-5 w-5" />
+                      Send via WhatsApp
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal variant="right" className="flex flex-col gap-6">
+            <div className="rounded-3xl bg-white p-6 shadow-xl shadow-navy-950/10 ring-1 ring-slate-100">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-700">Our head office</p>
+              <div className="mt-4 space-y-4">
+                {OFFICES.map((o) => (
+                  <div key={o.key} className="group flex items-start gap-3 rounded-2xl bg-slate-50 p-4 transition hover:bg-gold-50">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy-700 text-gold-400 transition group-hover:rotate-6">
+                      <MapPin className="h-5 w-5" />
+                    </span>
+                    <div className="text-sm leading-6 text-slate-600">
+                      <p className="font-bold text-navy-800">{o.name}</p>
+                      {o.lines.map((l) => <p key={l}>{l}</p>)}
+                      <a href={mapUrl(o.query)} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-navy-700 hover:text-gold-700">
+                        Get directions <ArrowRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="navy-pattern relative overflow-hidden rounded-3xl p-7 text-white shadow-xl">
+              <div aria-hidden className="blob absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gold-500/20 blur-2xl" />
+              <div className="relative flex items-center gap-3">
+                <Clock className="h-6 w-6 text-gold-400" />
+                <h3 className="font-serif text-xl font-semibold">Office Hours</h3>
+              </div>
+              <div className="relative mt-4 flex items-center justify-between rounded-2xl bg-white/[0.07] px-5 py-4">
+                <span className="text-sm text-white/80">{CONTACT.hoursDays}</span>
+                <span className="font-bold text-gold-300">{CONTACT.hoursTime}</span>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <OfficeLocations eyebrow="Find us" title="Our location" />
     </main>
   );
 }

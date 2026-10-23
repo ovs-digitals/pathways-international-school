@@ -8,6 +8,9 @@ const footerCols = [
     title: "About",
     links: [
       { label: "Welcome to PWIS", to: "/welcome" },
+      { label: "Accreditation & Affiliations", to: "/accreditation-affiliations" },
+      { label: "Academic Monitoring", to: "/academic-monitoring" },
+      { label: "Assessments & Examinations", to: "/assessments-examinations" },
       { label: "Curriculum Overview", to: "/curriculum" },
       { label: "Careers", to: "/career" },
     ],
@@ -19,6 +22,7 @@ const footerCols = [
       { label: "IGCSE", to: "/igcse" },
       { label: "International AS Levels", to: "/international-as-levels" },
       { label: "International A2 Levels", to: "/international-a2-levels" },
+      { label: "University Placement", to: "/university-placement" },
     ],
   },
   {
@@ -35,9 +39,9 @@ const footerCols = [
 ];
 
 const affiliations = [
-  { label: "Pearson Edexcel", image: "/partners/pearson-edexcel.webp", dark: true },
-  { label: "Government of Punjab", image: "/partners/punjab.webp" },
-  { label: "Olevels Virtual School", image: "/partners/olevels.webp" },
+  { label: "Pearson Edexcel", image: "partners/pearson-edexcel.webp", dark: true },
+  { label: "Government of Punjab", image: "partners/punjab.webp" },
+  { label: "Olevels Virtual School", image: "partners/olevels.webp" },
 ];
 
 const school = {
@@ -100,7 +104,7 @@ export default function Footer() {
             <div className="flex flex-col items-start gap-4">
               {/* Logo badge */}
               <div className="w-52 shrink-0">
-              <img src="/logo.webp" alt="Pathways International School" />
+              <img src="logo.webp" alt="Pathways International School" />
               </div>
 
               <div>
@@ -139,7 +143,7 @@ export default function Footer() {
                 <div className="mt-6 flex flex-wrap gap-2">
                   <ActionPill
                     href={`https://wa.me/${school.whatsappNumber}`}
-                    label="WhatsApp"
+                    label={`WhatsApp ${CONTACT.phone}`}
                   />
                   <ActionPill href={`mailto:${school.email}`} label="Email" />
                   <ActionPill href={school.mapHref} label="Map" />
@@ -298,13 +302,13 @@ function SocialIcon({ href, label, icon }) {
   );
 }
 
-function ActionPill({ href, label }) {
+function ActionPill({ href, label, green }) {
   return (
     <a
       href={href}
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel={href?.startsWith("http") ? "noreferrer" : undefined}
-      className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/70 hover:text-navy-900 hover:border-gold-500 hover:bg-gold-500 transition"
+      className={green ? "inline-flex items-center justify-center rounded-full bg-[#25D366] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#1fb457]" : "inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/70 hover:text-navy-900 hover:border-gold-500 hover:bg-gold-500 transition"}
     >
       {label}
     </a>

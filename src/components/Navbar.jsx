@@ -20,6 +20,9 @@ const navItems = [
     to: "#about",
     children: [
       { label: "Welcome to PWIS", to: "/welcome" },
+      { label: "Accreditation & Affiliations", to: "/accreditation-affiliations" },
+      { label: "Academic Monitoring", to: "/academic-monitoring" },
+      { label: "Assessments & Examinations", to: "/assessments-examinations" },
     ],
   },
 
@@ -43,6 +46,7 @@ const navItems = [
           { label: "International A2 Levels", to: "/international-a2-levels" },
         ],
       },
+      { label: "University Placement", to: "/university-placement" },
     ],
   },
 
@@ -235,7 +239,7 @@ export default function Navbar() {
             >
               <div className="flex items-center space-x-3">
                 <img
-                  src="/logo-light.webp"
+                  src="logo-light.webp"
                   alt="Pathways International School"
                   className="h-14 sm:h-[4.25rem] w-auto object-contain"
                 />

@@ -238,8 +238,8 @@ export function intents(now = new Date()) {
     {
       id: "recognition",
       keys: [["pearson", 4], ["edexcel", 4], ["recognised", 4], ["recognized", 4], ["approved", 4], ["accredit", 4], ["affiliated", 4], ["valid", 3], ["government", 3], ["punjab", 3], ["licensed", 3], ["centre number", 5], ["97911", 5]],
-      answer: "✅ **Pearson Edexcel approved centre — Centre No. 97911**\n✅ Licensed by the School Education Department, Government of Punjab\n✅ A project of Olevels Virtual School, UK\n\nIGCSE = Matric equivalent, A Levels = FSc equivalent, recognised worldwide.",
-      links: [L("Home", "/")],
+      answer: "✅ **Pearson Edexcel approved centre — Centre No. 97911**\n✅ Licensed by the School Education Department, Government of Punjab\n✅ OLevels Virtual School · British Council · AusPak International\n✅ UCAS Approved Centre (44041)\n\nIGCSE = Matric equivalent, A Levels = FSc equivalent, recognised worldwide.",
+      links: [L("Accreditation & Affiliations", "/accreditation-affiliations")],
     },
     {
       id: "tuition",
@@ -252,6 +252,18 @@ export function intents(now = new Date()) {
       keys: [["become regular", 6], ["regular student", 5], ["regular", 2.5], ["switch", 2]],
       answer: "Yes — a private candidate can **become a regular student**. Send a request from your student portal and our Admissions team will contact you.",
       links: [L("Open portal", "/portal"), APPLY],
+    },
+    {
+      id: "placement",
+      keys: [["university placement", 7], ["placement", 5], ["ucas", 6], ["auspak", 6], ["study abroad", 6], ["abroad", 4], ["bahar", 3], ["visa", 5], ["uk university", 6], ["australia", 4], ["canada", 4], ["foreign", 3], ["personal statement", 6]],
+      answer: "**International University Placement Programme** 🌍\nFor our enrolled and registered students:\n• **UCAS Registered Centre** — UK university applications, course selection, personal statements and academic references\n• **AusPak International** — admission counselling, applications and study visa guidance for Australia and other countries\n• Career counselling, documentation, visa and pre-departure support\n\nUnited Kingdom · Australia · Canada · Worldwide",
+      links: [L("University Placement", "/university-placement"), WA],
+    },
+    {
+      id: "assessment",
+      keys: [["assessment", 6], ["assessments", 6], ["quiz", 4], ["quizzes", 4], ["monthly test", 5], ["term exam", 5], ["monitoring", 5], ["progress report", 6], ["attendance", 3], ["homework", 4], ["coursework", 5]],
+      answer: "**Assessments & academic monitoring**\n• Internal (online & physical): quizzes, class tests, monthly assessments, term exams, mock exams, progress reviews\n• Attendance, coursework and progress reports are monitored throughout\n• Parents are kept informed about performance and attendance\n• Final IGCSE / IAL exams follow the awarding body's rules",
+      links: [L("Assessments", "/assessments-examinations"), L("Academic monitoring", "/academic-monitoring")],
     },
     {
       id: "career",

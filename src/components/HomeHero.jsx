@@ -11,10 +11,10 @@ const FROM_LEFT = {
   show: (i = 0) => ({ opacity: 1, x: 0, transition: { duration: 0.9, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] } }),
 };
 const SLIDES = [
-  { img: "/hero-bg1.webp", pos: "50% 32%", line: "Pearson Edexcel School.", lead: "Ab achi parhai ke liye shehar badalne ki zaroorat nahi!", text: "Live, interactive classes with expert teachers — for students all over Pakistan, right from home." },
-  { img: "/hero-bg2.webp", pos: "55% 40%", line: "IGCSE & A Levels School.", lead: "Expert teachers, real-time guidance.", text: "Har class live aur interactive — sawal poochiye, discuss kijiye aur apne teachers se seedha seekhiye." },
-  { img: "/hero-bg3.webp", pos: "50% 30%", line: "school — ghar baithe!", lead: "Flexible timings, affordable fees.", text: "Apne ghar ke comfort se, apne schedule ke mutabiq — quality education ab har ghar tak." },
-  { img: "/hero-students.webp", pos: "50% 25%", line: "for students all over Pakistan.", lead: "Private candidates welcome.", text: "British Council exam registration for IGCSE / A Levels — admission se exams tak, sab ek jagah." },
+  { img: "hero-bg1.webp", pos: "50% 32%", line: "Pearson Edexcel School.", lead: "Ab achi parhai ke liye shehar badalne ki zaroorat nahi!", text: "Live, interactive classes with expert teachers — for students all over Pakistan, right from home." },
+  { img: "hero-bg2.webp", pos: "55% 40%", line: "IGCSE & A Levels School.", lead: "Expert teachers, real-time guidance.", text: "Har class live aur interactive — sawal poochiye, discuss kijiye aur apne teachers se seedha seekhiye." },
+  { img: "hero-bg3.webp", pos: "50% 30%", line: "school — ghar baithe!", lead: "Flexible timings, affordable fees.", text: "Apne ghar ke comfort se, apne schedule ke mutabiq — quality education ab har ghar tak." },
+  { img: "hero-students.webp", pos: "50% 25%", line: "for students all over Pakistan.", lead: "Private candidates welcome.", text: "British Council exam registration for IGCSE / A Levels — admission se exams tak, sab ek jagah." },
 ];
 const SERIF = { fontFamily: '"Playfair Display", Georgia, "Times New Roman", serif' };
 

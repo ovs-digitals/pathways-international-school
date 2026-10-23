@@ -7,25 +7,25 @@ const values = [
     icon: Handshake,
     title: "Respect & Empathy",
     text: "We practise kindness, respect and compassion in every interaction — building a caring school community.",
-    image: "/community.webp",
+    image: "community.webp",
   },
   {
     icon: ShieldCheck,
     title: "Integrity",
     text: "We encourage honesty and strong moral character, empowering students to make the right choices.",
-    image: "/senior.webp",
+    image: "senior.webp",
   },
   {
     icon: Award,
     title: "Excellence",
     text: "We set high standards in learning and personal growth, supporting every student to achieve their best.",
-    image: "/o_level.webp",
+    image: "o_level.webp",
   },
   {
     icon: Users,
     title: "Responsibility",
     text: "We promote accountability, self-discipline and teamwork — so students grow into dependable leaders.",
-    image: "/seniorstudents.webp",
+    image: "seniorstudents.webp",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function PathwaysWelcomePage() {
         eyebrow="About Pathways"
         title="Welcome to"
         accent="Pathways International School."
-        image="/community.webp"
+        image="community.webp"
         text="A friendly, supportive learning community where students grow into confident, responsible and globally minded individuals."
       >
         <p className="font-serif text-2xl text-white/90 md:text-3xl">
@@ -69,7 +69,7 @@ export default function PathwaysWelcomePage() {
               <Reveal variant="left" className="relative mx-auto w-full max-w-[19rem]">
                 <div className="absolute -inset-3 rotate-3 rounded-[1.8rem] border-2 border-gold-400/50" />
                 <div className="relative overflow-hidden rounded-[1.6rem] bg-white ring-4 ring-gold-500/70">
-                  <img src="/ceo-waqar-hussain.webp" alt="Waqar Hussain, CEO" className="aspect-[4/5] w-full object-cover object-top" />
+                  <img src="ceo-waqar-hussain.webp" alt="Waqar Hussain, CEO" className="aspect-[4/5] w-full object-cover object-top" />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/95 via-navy-900/70 to-transparent px-5 pb-4 pt-14 text-center">
                     <div className="font-serif text-xl font-semibold">Waqar Hussain</div>
                     <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-400">Chief Executive Officer</div>
@@ -186,8 +186,8 @@ export default function PathwaysWelcomePage() {
           </Reveal>
           <Reveal variant="zoom" className="relative">
             <div className="grid grid-cols-2 gap-4">
-              <img src="/stageperformance.webp" alt="" className="h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
-              <img src="/sports.webp" alt="" className="mt-10 h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+              <img src="stageperformance.webp" alt="" className="h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+              <img src="sports.webp" alt="" className="mt-10 h-64 w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
             </div>
             <div className="soft-float absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-gold-500 px-5 py-2 text-xs font-bold uppercase tracking-widest text-navy-900 shadow-xl">
               Excellence · Character · Community
